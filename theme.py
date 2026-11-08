@@ -20,6 +20,7 @@ COLOR_ON_PRIMARY = "#EFE9DB"   # text colour used on top of the red
 FONT_NAME = "Poppins"
 FONT_WEIGHTS = "400;500;600"   # weights to download from Google Fonts
 FONT_FAMILY = f"'{FONT_NAME}', sans-serif"
+NAV_FONT_SIZE = "1.2rem"       # sidebar navigation (default is about 1rem)
 # FONT_FAMILY = "'Poppins', Georgia, 'Times New Roman', serif"
 
 # Shape
@@ -68,6 +69,10 @@ def _css():
     [data-testid="stSidebar"] {{
         background-color: var(--surface);
         border-right: var(--border-width) solid var(--accent);
+    }}
+
+    [data-testid="stSidebar"] [data-testid="stRadio"] label p {{
+        font-size: {NAV_FONT_SIZE};
     }}
 
     /* Buttons */

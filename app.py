@@ -122,10 +122,10 @@ def home_page():
     columns[2].metric("Lost reports", db.get_count("lost_reports"))
     st.markdown(
         """
-        **Demo flow**
+        **How it works?**
         1. Check in a tagged bag and record its measurements and owner.
         2. Search a lost-bag report or photograph an untagged found bag.
-        3. Staff confirm a candidate before a mock SMS is recorded.
+        3. Staff can confirm a candidate before a mock SMS is recorded.
 
         **Limits:** Weight and dimensions are typed in. Lighting is controlled in this concept,
         so photograph all demo bags under the same conditions. Synthetic data demonstrates
