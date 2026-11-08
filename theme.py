@@ -17,7 +17,10 @@ COLOR_HEADING = "#444444"      # darker grey for titles
 COLOR_ON_PRIMARY = "#EFE9DB"   # text colour used on top of the red
 
 # Typography
-FONT_FAMILY = "Georgia, 'Times New Roman', serif"
+FONT_NAME = "Poppins"
+FONT_WEIGHTS = "400;500;600"   # weights to download from Google Fonts
+FONT_FAMILY = f"'{FONT_NAME}', sans-serif"
+# FONT_FAMILY = "'Poppins', Georgia, 'Times New Roman', serif"
 
 # Shape
 BORDER_WIDTH = "2px"
@@ -28,6 +31,9 @@ BORDER_RADIUS = "6px"
 def _css():
     return f"""
     <style>
+
+    @import url('https://fonts.googleapis.com/css2?family={FONT_NAME}:wght@{FONT_WEIGHTS}&display=swap');
+
     :root {{
         --bg: {COLOR_BACKGROUND};
         --surface: {COLOR_SURFACE};
@@ -45,9 +51,6 @@ def _css():
     .stApp, [data-testid="stHeader"] {{
         background-color: var(--bg);
         color: var(--text);
-        font-family: var(--font);
-    }}
-    .stApp p, .stApp label, .stApp li, .stApp span, .stApp div {{
         font-family: var(--font);
     }}
     h1, h2, h3, h4, h5, h6 {{
@@ -90,6 +93,14 @@ def _css():
         color: var(--text) !important;
         border: var(--border-width) solid var(--accent) !important;
         border-radius: var(--radius) !important;
+    }}
+
+    /* File uploader: keep button text on one line and let the button grow */
+    [data-testid="stFileUploaderDropzone"] button {{
+        white-space: nowrap;
+        width: auto;
+        min-width: max-content;
+        padding: 0.4rem 1.2rem;
     }}
 
     /* Forms, metrics, alerts */
