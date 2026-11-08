@@ -5,4 +5,4 @@ numpy
 scikit-image
 pillow
 qrcode
-pandas<2
+pandas

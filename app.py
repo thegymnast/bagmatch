@@ -9,6 +9,7 @@ import streamlit as st
 from PIL import Image
 
 import db
+import theme
 from matcher import rank_bags
 from seed import seed_data, sync_bag_photos
 from vision import (
@@ -438,6 +439,7 @@ def database_page():
 
 def main():
     st.set_page_config(page_title="Bag Recovery Demo", page_icon="🧳", layout="wide")
+    theme.apply_theme();
     db.init_db()
     pages = {
         "Home": home_page,

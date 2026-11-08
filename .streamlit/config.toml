@@ -1,0 +1,8 @@
+# Keep these values in sync with the colours at the top of theme.py
+[theme]
+base = "light"
+primaryColor = "#C93A40"
+backgroundColor = "#EFE9DB"
+secondaryBackgroundColor = "#E4DCC8"
+textColor = "#5A5A5A"
+font = "serif"
