@@ -1,0 +1,8 @@
+streamlit
+altair<5
+opencv-python
+numpy
+scikit-image
+pillow
+qrcode
+pandas<2
