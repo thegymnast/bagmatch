@@ -114,7 +114,7 @@ def _reference_controls():
 
 
 def home_page():
-    st.title("Bag Check-in & Recovery")
+    st.title("MatchABag")
     st.write("A small concept app for recording, matching and safely re-tagging checked bags.")
     columns = st.columns(3)
     columns[0].metric("Checked-in bags", db.get_count("bags"))
@@ -438,7 +438,7 @@ def database_page():
 
 
 def main():
-    st.set_page_config(page_title="Bag Recovery Demo", page_icon="🧳", layout="wide")
+    st.set_page_config(page_title="MatchABag", page_icon="🧳", layout="wide")
     theme.apply_theme();
     db.init_db()
     pages = {
